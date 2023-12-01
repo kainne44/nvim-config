@@ -1,3 +1,1 @@
 require("matt")
-
-print("hello")
