@@ -8,9 +8,10 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.textwidth = 80
-
+vim.opt.linebreak = true
+vim.opt.breakat = "80"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
@@ -32,3 +33,5 @@ vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
 vim.g.netrw_banner = 0
+
+vim.cmd[[highlight ColorColumn ctermbg=1 guibg=lightgrey]]
