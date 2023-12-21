@@ -21,7 +21,7 @@ require("lazy").setup({
     },
 })
 require("toggleterm").setup {
-    size = 80,
+    size = 60,
     direction = 'vertical',
     open_mapping = [[<c-\>]],
 }

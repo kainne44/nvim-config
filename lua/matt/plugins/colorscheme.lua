@@ -35,15 +35,15 @@ return {
                         { "Keyword",                       '#fa5f8b' },
 
                         -- Operators and Delimiters
-                        { "Operator",                      '#c4c9d6' },
-                        { "Delimiter",                     '#c4c9d6' },
+                        { "Operator",                      '#a6abb8' },
+                        { "Delimiter",                     '#a6abb8' },
 
                         -- Comments and Documentation
                         { "Comment",                       '#6d727e', nil,      m.italic },
-                        { "DocComment",                    '#e2eaf5', nil,      m.italic },
+                        { "DocComment",                    '#6d727e', nil,      m.italic },
 
                         -- Identifiers
-                        { "Identifier",                    '#c4c9d6' },
+                        { "Identifier",                    '#a6abb8' },
                         { "Variable",                      '#d3ab58' },
 
                         { "Function",                      '#00a9b9' },

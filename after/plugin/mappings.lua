@@ -22,9 +22,13 @@ wk.register({
     ["<leader>Y"] = { "Yank to System Buff" },
     ["<leader>f"] = { "Format w/ LSP" },
     ["<leader>q"] = { ":q <cr>", "Quit" },
-    ["<leader>t"] = {":Telescope toggleterm_manager <cr>jj", "Terminal Manager"}
+    ["<leader>t"] = {":Telescope toggleterm_manager <cr>jj", "Terminal Manager"},
+    ["gcc"] = {"Comment Line"},
+    ["gbc"] = {"Comment Block"}
 })
 wk.register({
     J = { ":m '>+1<CR>gv=gv", "Move Line Down" },
     K = { ":m '<-2<CR>gv=gv", "Move Line Up" },
+    ["gc"] = {"Comment Line"},
+    ["gb"] = {"Comment Block"}
 }, { mode = "v" })

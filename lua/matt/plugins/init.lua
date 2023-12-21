@@ -84,4 +84,8 @@ return {
             -- "rcarriga/nvim-notify",
         }
     },
+    {
+        "savq/paq-nvim",
+        "frabjous/knap"
+    },
 }
