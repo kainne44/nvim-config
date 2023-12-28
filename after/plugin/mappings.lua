@@ -1,7 +1,7 @@
 local wk = require("which-key")
 
 wk.register({
-    ["<leader>w"] = { ":w <cr>", "Save" },
+    ["<leader>w"] = { "<cmd>w<cr>", "Save" },
     -- ["<leader>pv"] = { vim.cmd.Ex, "Netrw" },
     J = { "mzJ`z", "Append Line Above" },
     ["<leader>a"] = { "Add File to Harpoon" },
@@ -21,14 +21,14 @@ wk.register({
     ["<leader>x"] = { "Make Bash Executable" },
     ["<leader>Y"] = { "Yank to System Buff" },
     ["<leader>f"] = { "Format w/ LSP" },
-    ["<leader>q"] = { ":q <cr>", "Quit" },
-    ["<leader>t"] = {":Telescope toggleterm_manager <cr>jj", "Terminal Manager"},
+    ["<leader>q"] = { "<cmd>confirm q <cr>", "Quit" },
+    ["<leader>t"] = {"<cmd>Telescope toggleterm_manager <cr>jj", "Terminal Manager"},
     ["gcc"] = {"Comment Line"},
     ["gbc"] = {"Comment Block"}
 })
 wk.register({
-    J = { ":m '>+1<CR>gv=gv", "Move Line Down" },
-    K = { ":m '<-2<CR>gv=gv", "Move Line Up" },
+    J = { "<cmd>m '>+1<CR>gv=gv", "Move Line Down" },
+    K = { "<cmd>m '<-2<CR>gv=gv", "Move Line Up" },
     ["gc"] = {"Comment Line"},
     ["gb"] = {"Comment Block"}
 }, { mode = "v" })

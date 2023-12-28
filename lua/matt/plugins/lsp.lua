@@ -3,7 +3,16 @@ return { --- Uncomment these if you want to manage LSP servers from neovim
     { 'williamboman/mason-lspconfig.nvim' },
 
     { 'VonHeikemen/lsp-zero.nvim',        branch = 'v3.x' },
-    { 'neovim/nvim-lspconfig' },
+    {
+        'neovim/nvim-lspconfig',
+        init_options = {
+            userLanguages = {
+                eelixir = "html-eex",
+                eruby = "erb",
+                rust = "html",
+            },
+        },
+    },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
     {
