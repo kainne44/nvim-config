@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 -- This remaps the netrw explorer cmd to 'leader pv'
 vim.keymap.set("n", "<leader>pv", "<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>jj")
 vim.keymap.set("n", "<leader>ph", "<cmd>Telescope find_files hidden=true<cr>", { desc = "Find Hidden Files" })
-vim.keymap.set("v", "J", "<cmd>m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", "<cmd>m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- append below to end without moving cursor
 vim.keymap.set("n", "J", "mzJ`z")

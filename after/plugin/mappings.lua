@@ -27,8 +27,8 @@ wk.register({
     ["gbc"] = {"Comment Block"}
 })
 wk.register({
-    J = { "<cmd>m '>+1<CR>gv=gv", "Move Line Down" },
-    K = { "<cmd>m '<-2<CR>gv=gv", "Move Line Up" },
+    J = { "Move Line Down" },
+    K = { "Move Line Up" },
     ["gc"] = {"Comment Line"},
     ["gb"] = {"Comment Block"}
 }, { mode = "v" })
