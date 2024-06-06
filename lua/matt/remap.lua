@@ -17,10 +17,10 @@ vim.keymap.set("n", "n", "nzzzv", { desc = "Next Match" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Prev Match" })
 
 -- greatest remap ever - prevent overwrite of paste buffer
-vim.keymap.set("x", "<leader>p", "\"_dP", {desc = "Prevent Paste Overwrite"})
+vim.keymap.set("x", "<leader>p", "\"_dP", { desc = "Prevent Paste Overwrite" })
 
 -- next greatest remap ever : asbjornHaland - lets you yank to system
-vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y", {desc = "Yank to Sys"})
+vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y", { desc = "Yank to Sys" })
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 -- more delete to void goodness
@@ -52,3 +52,6 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end, { desc = "Source" })
 vim.keymap.set("n", "<leader>c", ":bd!<cr>", { desc = "Close Buffer" })
+-- prev / next buffer
+vim.keymap.set("n", "<S-Tab>", ":bprev<cr>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "<Tab>", ":bnext<cr>", { desc = "Next Buffer" })

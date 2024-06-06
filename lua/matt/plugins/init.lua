@@ -15,6 +15,14 @@ return {
         'mbbill/undotree'
     },
     {
+        'lervag/vimtex',
+        ft = 'tex',
+        config = function()
+            vim.g.vimtex_view_method = 'skim'
+            vim.g.tex_flavor = 'xelatex'  -- or 'lualatex'
+        end
+    },
+    {
         'tpope/vim-fugitive'
     },
     {
