@@ -1,29 +1,47 @@
 return {
     {
+        'kevinhwang91/nvim-ufo'
+    },
+    {
         "folke/which-key.nvim",
         event = "VeryLazy",
         init = function()
             vim.o.timeout = true
             vim.o.timeoutlen = 300
         end,
-        opts = {}
+        opts = {},
     },
     {
-        'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'
+        'stevearc/aerial.nvim',
+        opts = {
+            layout = {
+                min_width = 40,
+                default_direction = "prefer_left",
+            },
+        },
+        -- Optional dependencies
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-tree/nvim-web-devicons"
+        },
     },
     {
-        'mbbill/undotree'
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
     },
     {
-        'lervag/vimtex',
-        ft = 'tex',
+        "mbbill/undotree",
+    },
+    { 'echasnovski/mini.indentscope', version = '*' },
+    { 'echasnovski/mini.surround',    version = '*' },
+    { 'echasnovski/mini.pairs',       version = '*' },
+    {
+        "lervag/vimtex",
+        ft = "tex",
         config = function()
-            vim.g.vimtex_view_method = 'skim'
-            vim.g.tex_flavor = 'xelatex'  -- or 'lualatex'
-        end
-    },
-    {
-        'tpope/vim-fugitive'
+            vim.g.vimtex_view_method = "skim"
+            vim.g.tex_flavor = "xelatex"     -- or 'lualatex'
+        end,
     },
     {
         "Max397574/better-escape.nvim",
@@ -32,19 +50,13 @@ return {
         end,
     },
     {
-        { 'akinsho/toggleterm.nvim', version = "*", config = true },
+        { "akinsho/toggleterm.nvim", version = "*", config = true },
     },
     {
-        'm4xshen/autoclose.nvim'
-    },
-    -- {
-    --     'rcarriga/nvim-notify'
-    -- },
-    {
-        "christoomey/vim-tmux-navigator"
+        "christoomey/vim-tmux-navigator",
     },
     {
-        'numToStr/Comment.nvim',
+        "numToStr/Comment.nvim",
         lazy = false,
     },
     {
@@ -54,46 +66,28 @@ return {
             -- your configuration comes here
             -- or leave it empty to use the default settings
             -- refer to the configuration section below
-        }
+        },
     },
     {
         "andrewferrier/wrapping.nvim",
         config = function()
             require("wrapping").setup()
-        end
+        end,
     },
     {
-        'NvChad/nvim-colorizer.lua'
+        'mrjones2014/smart-splits.nvim' },
+    { "NvChad/nvim-colorizer.lua" },
+    {
+        "Bekaboo/deadcolumn.nvim",
     },
     {
-        'Bekaboo/deadcolumn.nvim'
+        { "akinsho/toggleterm.nvim", version = "*", config = true },
     },
     {
-        { 'akinsho/toggleterm.nvim', version = "*", config = true }
-    },
-    {
-        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
-    },
-    {
-        "folke/noice.nvim",
-        event = "VeryLazy",
-        opts = {
-            -- add any options here
-            cmdline = {
-                view = 'cmdline',
-            },
-        },
-        dependencies = {
-            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-            "MunifTanjim/nui.nvim",
-            -- OPTIONAL:
-            --   `nvim-notify` is only needed, if you want to use the notification view.
-            --   If not available, we use `mini` as the fallback
-            -- "rcarriga/nvim-notify",
-        }
+        { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
     },
     {
         "savq/paq-nvim",
-        "frabjous/knap"
+        "frabjous/knap",
     },
 }
