@@ -42,3 +42,8 @@ vim.keymap.set("n", "<leader>c", ":bd!<cr>", { desc = "Close Buffer" })
 -- prev / next buffer
 vim.keymap.set("n", "<S-Tab>", ":bprev<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<Tab>", ":bnext<cr>", { desc = "Next Buffer" })
+
+-- oil.nvim open file directory
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+-- toggle neotree file directory
+vim.keymap.set("n", [[\]], "<CMD>Neotree toggle<CR>", { desc = "Open Neotree" })

@@ -2,10 +2,10 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 -- show which line your cursor is on
-vim.opt.cursorline = true
+vim.opt.cursorline = false
 
 -- minimum number of screen lines to keep above and below cursor
-vim.opt.scrolloff = 25
+vim.opt.scrolloff = 10
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4

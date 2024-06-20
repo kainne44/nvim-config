@@ -15,7 +15,7 @@ return {
         'stevearc/aerial.nvim',
         opts = {
             layout = {
-                min_width = 40,
+                min_width = 50,
                 default_direction = "prefer_left",
             },
         },
@@ -32,15 +32,15 @@ return {
     {
         "mbbill/undotree",
     },
-    { 'echasnovski/mini.indentscope', version = '*' },
-    { 'echasnovski/mini.surround',    version = '*' },
-    { 'echasnovski/mini.pairs',       version = '*' },
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
+    { 'echasnovski/mini.surround',           version = '*' },
+    { 'echasnovski/mini.pairs',              version = '*' },
     {
         "lervag/vimtex",
         ft = "tex",
         config = function()
             vim.g.vimtex_view_method = "skim"
-            vim.g.tex_flavor = "xelatex"     -- or 'lualatex'
+            vim.g.tex_flavor = "xelatex" -- or 'lualatex'
         end,
     },
     {
@@ -59,6 +59,39 @@ return {
         "numToStr/Comment.nvim",
         lazy = false,
     },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+            "MunifTanjim/nui.nvim",
+            -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+        }
+    },
+    -- lazy.nvim
+    {
+        "folke/noice.nvim",
+        event = "VeryLazy",
+        opts = {
+            -- add any options here
+        },
+        dependencies = {
+            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+            "MunifTanjim/nui.nvim",
+            -- OPTIONAL:
+            --   `nvim-notify` is only needed, if you want to use the notification view.
+            --   If not available, we use `mini` as the fallback
+           -- "rcarriga/nvim-notify",
+        }
+    },
+    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
