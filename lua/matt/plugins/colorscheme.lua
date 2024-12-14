@@ -156,7 +156,35 @@ return {
                         { "GitSignsChange",                         s.warning, '21262f' },
                         { "GitSignsDelete",                         m.error,   '21262f' },
 
-
+                        -- RenderMarkdown
+                        { "RenderMarkdownH1Bg",                     '#21262f', '#00a3d2' },
+                        { "RenderMarkdownH2Bg",                     '#21262f', '#f06c6f' },
+                        { "RenderMarkdownH3Bg",                     '#21262f', '#d08447' },
+                        { "RenderMarkdownH4Bg",                     '#21262f', '#00a9b9' },
+                        { "RenderMarkdownH5Bg",                     '#21262f', '#fa5f8b' },
+                        { "RenderMarkdownH6Bg",                     '#21262f', '#e17954' },
+                        { "RenderMarkdownCode",                     '#d3ab58', '#393e48' },
+                        { "RenderMarkdownQuote",                    '#525762', '#21262f' },
+                        { "RenderMarkdownDash",                     '#00a3d2', '#21262f' },
+                        { "RenderMarkdownSign",                     '#00a3d2', '#21262f' },
+                        { "RenderMarkdownMath",                     s.ok,      '#e2eaf5' },
+                        { "RenderMarkdownHtmlComment",              s.ok,      '#e2eaf5' },
+                        { "RenderMarkdownLink",                     '#d3ab58', '#21262f' },
+                        { "RenderMarkdownUnchecked",                '#fa5f8b', '#21262f' },
+                        { "RenderMarkdownTodo",                     '#00a9b9', '#21262f' },
+                        { "RenderMarkdownTableHead",                '#00a3d2', '#21262f' },
+                        { "RenderMarkdownTableRow",                 '#00a3d2', '#21262f' },
+                        { "RenderMarkdownTableFill",                '#fa5f8b', '#21262f' },
+                        { "RenderMarkdownSuccess",                  '#00a9b9', '#21262f' },
+                        { "RenderMarkdownInfo",                     '#e2eaf5', '#21262f' },
+                        { "RenderMarkdownWarn",                     '#d08447', '#21262f' },
+                        { "RenderMarkdownError",                    '#fa5f8b', '#21262f' },
+                        { "RenderMarkdownWikiLink",                 '#purple', '#21262f' },
+                        { "RenderMarkdownBullet",                   '#00a3d2', '#21262f' },
+                        { "RenderMarkdownInlineHighlight",          '#d3ab58', '#393e48' },
+                        { "RenderMarkdownCodeInline",               '#d3ab58', '#393e48' },
+                        { "RenderMarkdownChecked",                  '#fa5f8b', '#21262f' },
+                        { "RenderMarkdownHint",                     s.ok,      '#e2eaf5' },
                     }
                 }
             })

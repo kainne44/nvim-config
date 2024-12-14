@@ -1,6 +1,33 @@
 return {
     {
+        "allaman/emoji.nvim",
+        version = "1.0.0", -- optionally pin to a tag
+        ft = "markdown",   -- adjust to your needs
+        dependencies = {
+            -- optional for nvim-cmp integration
+            "hrsh7th/nvim-cmp",
+            -- optional for telescope integration
+            "nvim-telescope/telescope.nvim",
+        },
+        opts = {
+            -- default is false
+            enable_cmp_integration = true,
+            -- optional if your plugin installation directory
+            -- is not vim.fn.stdpath("data") .. "/lazy/
+            -- plugin_path = vim.fn.expand("$HOME/plugins/"),
+        },
+        config = function(_, opts)
+            require("emoji").setup(opts)
+            -- optional for telescope integration
+            require("telescope").load_extension("emoji")
+        end,
+    },
+    {
         'kevinhwang91/nvim-ufo'
+    },
+    {
+        'renerocksai/telekasten.nvim',
+        dependencies = { 'nvim-telescope/telescope.nvim' }
     },
     {
         "folke/which-key.nvim",
@@ -88,10 +115,10 @@ return {
             -- OPTIONAL:
             --   `nvim-notify` is only needed, if you want to use the notification view.
             --   If not available, we use `mini` as the fallback
-           -- "rcarriga/nvim-notify",
+            -- "rcarriga/nvim-notify",
         }
     },
-    {'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'},
+    { 'akinsho/bufferline.nvim',  version = "*", dependencies = 'nvim-tree/nvim-web-devicons' },
     {
         "folke/todo-comments.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
@@ -122,5 +149,14 @@ return {
     {
         "savq/paq-nvim",
         "frabjous/knap",
+    },
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+        ---@module 'render-markdown'
+        -- -@type render.md.UserConfig
+        opts = {},
     },
 }

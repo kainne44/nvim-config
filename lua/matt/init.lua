@@ -20,9 +20,18 @@ require("lazy").setup({
         },
     },
 })
+
+require('telekasten').setup({
+    home = vim.fn.expand("~/Documents/nvault"), -- Put the name of your notes directory here
+})
 require("oil").setup()
 vim.opt.termguicolors = true
 require("bufferline").setup {}
+require('render-markdown').setup({
+    file_types = {'markdown', 'telekasten'},
+    render_modes = true,
+
+})
 require("noice").setup({
     lsp = {
         -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
@@ -43,11 +52,11 @@ require("noice").setup({
     messages = {
         -- NOTE: If you enable messages, then the cmdline is enabled automatically.
         -- This is a current Neovim limitation.
-        enabled = false,         -- enables the Noice messages UI
-        view = "notify",         -- default view for messages
-        view_error = "notify",   -- view for errors
-        view_warn = "notify",    -- view for warnings
-        view_history = "messages", -- view for :messages
+        enabled = false,             -- enables the Noice messages UI
+        view = "notify",             -- default view for messages
+        view_error = "notify",       -- view for errors
+        view_warn = "notify",        -- view for warnings
+        view_history = "messages",   -- view for :messages
         view_search = "virtualtext", -- view for search count messages. Set to `false` to disable
     },
 })
@@ -162,7 +171,7 @@ require("lazy").setup({
 require("Comment").setup()
 require("telescope").load_extension("fzf")
 require("telescope").load_extension("file_browser")
-
+require("telescope").load_extension("emoji")
 if vim.g.neovide then
     vim.o.guifont = "MesloLGM Nerd Font:h16"
 end

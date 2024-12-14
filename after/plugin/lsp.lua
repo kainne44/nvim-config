@@ -1,4 +1,4 @@
-        local lsp_zero = require('lsp-zero')
+local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
     local opts = { buffer = bufnr, remap = false }
@@ -35,6 +35,7 @@ cmp.setup({
         { name = 'nvim_lsp' },
         { name = 'nvim_lua' },
         { name = 'luasnip' },
+        { name = 'emoji' },
     },
     formatting = lsp_zero.cmp_format(),
     mapping = cmp.mapping.preset.insert({
